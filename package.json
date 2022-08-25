@@ -1,0 +1,38 @@
+{
+  "name": "projeto_node_dio",
+  "version": "1.0.0",
+  "description": "iniciando Node",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "test": "jest",
+    "test:unit": "jest src",
+    "test:integration": "jest tests",
+    "start": "node build/index.js",
+    "build": " tsc",
+    "dev": "ts-node-dev src/index.ts",
+    "service:dev": "export PORT=5001 && yarn build && yarn start",
+    "service:prod": "export PORT=5000 && yarn build && yarn start",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.ts ."
+  },
+  "keywords": [
+    "javascript;node"
+  ],
+  "author": "Tamer Serhan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^28.1.2",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  }
+}
